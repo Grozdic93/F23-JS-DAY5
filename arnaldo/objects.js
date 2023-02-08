@@ -84,16 +84,16 @@ document.getElementById("solution").innerHTML += `
 <p> The animal called ${Animal2.animalName} is ${Animal2.weight} and lives in ${Animal2.homecountry}. </p>`;
 
 class Car {
-    carbrand;
+    brand;
     type;
     model;
-    constructor(carbrand, type, model) {
-        this.carbrand = carbrand;
+    constructor(brand, type, model) {
+        this.brand = brand;
         this.type = type;
         this.model = model;
     }
     carfacts() {
-        return (`The car Brand is ${this.carbrand} and the car type is ${this.type} and the car model is ${this.model}. <br>`)
+        return (`The car Brand is ${this.brand} and the car type is ${this.type} and the car model is ${this.model}. <br>`)
     }
 
 }
@@ -104,3 +104,24 @@ let Car2 = new Car("Volvo", "S60", "4");
 document.getElementById("solution").innerHTML += `${Car2.carfacts()}`;
 let Car3 = new Car("Mitsubishi", "Evolution", "2");
 document.getElementById("solution").innerHTML += `${Car3.carfacts()}`;
+
+// Intermediate Ex 1
+
+class Motorbike extends car {
+    hp;
+    wheels;
+
+    constructor(brand, type, model, hp, wheels) {
+        super(brand, type, model);
+        this.wheels = wheels;
+        this.hp = hp;
+    }
+    driveMotor() {
+        return `you drive the ${this.brand} with ${this.hp} hp`
+    }
+
+}
+let motorbike = new Motorbike("Harley", 2020, "Black", 2, 200);
+print(motorbike)
+print(motorbike.driveMotor())
+print(motorbike.drive())
