@@ -57,4 +57,50 @@ document.getElementById("solution").innerHTML += `
 <h1>${person1.firstName} ${person1.lastName}</h1>`
 let person2 = new Person("Lukasz", "Lang");
 document.getElementById("solution").innerHTML += `
-<p>The name of this guy is ${person2.firstName} ${person2.lastName}`;
+<p>The name of this guy is ${person2.firstName} ${person2.lastName}`
+let person3 = new Person("Thomas", "Sonnleitner");
+document.getElementById("solution").innerHTML += ` 
+<p > He is ${ person3.firstName }`;
+
+class Animal {
+    animalName;
+    weight;
+    homecountry;
+    constructor(animalName, weight, homecountry) {
+        this.animalName = animalName;
+        this.weight = weight;
+        this.homecountry = homecountry;
+    }
+    Animalindex() {
+        return this.animalName + ` ` + this.weight + ` ` + this.homecountry;
+    }
+}
+let Animal1 = new Animal("lion", "190kg", "africa");
+document.getElementById("solution").innerHTML += `
+<h1>${Animal1.Animalindex()}</h1>`;
+
+let Animal2 = new Animal("Sealion", "300kg", "New Zealand");
+document.getElementById("solution").innerHTML += `
+<p> The animal called ${Animal2.animalName} is ${Animal2.weight} and lives in ${Animal2.homecountry}. </p>`;
+
+class Car {
+    carbrand;
+    type;
+    model;
+    constructor(carbrand, type, model) {
+        this.carbrand = carbrand;
+        this.type = type;
+        this.model = model;
+    }
+    carfacts() {
+        return (`The car Brand is ${this.carbrand} and the car type is ${this.type} and the car model is ${this.model}. <br>`)
+    }
+
+}
+
+let Car1 = new Car("Ford", "Mustang", "3");
+document.getElementById("solution").innerHTML += `${Car1.carfacts()}`;
+let Car2 = new Car("Volvo", "S60", "4");
+document.getElementById("solution").innerHTML += `${Car2.carfacts()}`;
+let Car3 = new Car("Mitsubishi", "Evolution", "2");
+document.getElementById("solution").innerHTML += `${Car3.carfacts()}`;
