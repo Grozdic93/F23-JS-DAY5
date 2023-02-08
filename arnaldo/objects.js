@@ -25,20 +25,20 @@ let animal = {
 }
 console.log(animal.fullAnimal());
 
-let car = {
-    brand: "Ford",
-    model: "Mustang",
-    horsepower: 700,
-    maximumspeed: "322km/h",
-    fullCar: function() {
-        return this.brand + ` ` + this.model + ` ` + `is able to drive` + ` ` + this.maximumspeed;
-    }
-};
-document.getElementById("result").innerHTML = `
-<h1>${person.firstName}</h1><br>
-<p>${person.age}</p>
-<p>${car.brand} ${car.model}</p>
-<p> Favourite Animal: <h2>${animal.animalName}</h2>`;
+// let car = {
+//     brand: "Ford",
+//     model: "Mustang",
+//     horsepower: 700,
+//     maximumspeed: "322km/h",
+//     fullCar: function() {
+//         return this.brand + ` ` + this.model + ` ` + `is able to drive` + ` ` + this.maximumspeed;
+//     }
+// };
+// document.getElementById("result").innerHTML = `
+// <h1>${person.firstName}</h1><br>
+// <p>${person.age}</p>
+// <p>${car.brand} ${car.model}</p>
+// <p> Favourite Animal: <h2>${animal.animalName}</h2>`;
 
 // Ex 1.2
 class Person {
@@ -83,7 +83,7 @@ let Animal2 = new Animal("Sealion", "300kg", "New Zealand");
 document.getElementById("solution").innerHTML += `
 <p> The animal called ${Animal2.animalName} is ${Animal2.weight} and lives in ${Animal2.homecountry}. </p>`;
 
-class Car {
+class Carexpo {
     brand;
     type;
     model;
@@ -98,16 +98,16 @@ class Car {
 
 }
 
-let Car1 = new Car("Ford", "Mustang", "3");
+let Car1 = new Carexpo("Ford", "Mustang", "3");
 document.getElementById("solution").innerHTML += `${Car1.carfacts()}`;
-let Car2 = new Car("Volvo", "S60", "4");
+let Car2 = new Carexpo("Volvo", "S60", "4");
 document.getElementById("solution").innerHTML += `${Car2.carfacts()}`;
-let Car3 = new Car("Mitsubishi", "Evolution", "2");
+let Car3 = new Carexpo("Mitsubishi", "Evolution", "2");
 document.getElementById("solution").innerHTML += `${Car3.carfacts()}`;
 
 // Intermediate Ex 1
 
-class Motorbike extends car {
+class Motorbike extends Carexpo {
     hp;
     wheels;
 
@@ -122,6 +122,4 @@ class Motorbike extends car {
 
 }
 let motorbike = new Motorbike("Harley", 2020, "Black", 2, 200);
-print(motorbike)
-print(motorbike.driveMotor())
-print(motorbike.drive())
+document.getElementById("solution").innerHTML += (motorbike.driveMotor());
