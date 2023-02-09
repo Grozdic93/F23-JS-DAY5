@@ -5,11 +5,11 @@ let people = [{
     like: 199,
     pic: "https://cdn.pixabay.com/photo/2019/07/31/06/09/zodiac-sign-4374411__340.jpg"
 }, {
-    fName: "Billy",
-    lName: "Joel",
-    age: "50",
+    fName: "Samuel",
+    lName: "Bismarques",
+    age: "1",
     like: 499,
-    pic: "https://cdn.pixabay.com/photo/2019/07/31/06/03/zodiac-sign-4374405__340.jpg"
+    pic: "https://cdn.pixabay.com/photo/2019/07/31/06/03/zodiac-sign-4374407__340.jpg"
 }, {
     fName: "Julia",
     lName: "Bismarques",
@@ -58,10 +58,10 @@ let moreinfobtns = document.getElementsByClassName("More");
 for (let i = 0; i < moreinfobtns.length; i++) {
     moreinfobtns[i].addEventListener("click", function() {
         document.getElementById("info").innerHTML = `<div class="card" style="width: 100%;">
-        <img src="${people[0].pic}" class="card-img-top" alt="${people[0].fName}">
+        <img src="${people[i].pic}" class="card-img-top" alt="${people[i].fName}">
         <div class="card-body">
-          <h5 class="card-title">${people[0].fName} ${people[0].lName}</h5>
-          <p class="card-text"> ${people[0].age} <br> ${people[0].like}</p>
+          <h5 class="card-title">${people[i].fName} ${people[i].lName}</h5>
+          <p class="card-text"> ${people[i].age} <br> ${people[i].like}</p>
         </div>
       </div>`;
     })
